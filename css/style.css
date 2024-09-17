@@ -1,0 +1,274 @@
+*, ::before, ::after{margin: 0px; box-sizing: border-box;}
+/* *{outline: solid 1px red;} */
+a{text-decoration: none;}
+button{padding: 0px; cursor: pointer;}
+:disabled{cursor: not-allowed;}
+img{vertical-align: bottom;}
+iframe{border: 0px;}
+ul{list-style: none; padding: 0px;}
+label{display: inline-block;}
+
+/* import font family */
+@font-face {
+    font-family: Proxima;
+    src: url(font/ProximaNovaT-Thin.woff2);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Proxima;
+    src: url(font/ProximaNova-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Proxima;
+    src: url(font/ProximaNova-Bold.woff2);
+    font-weight: 700;
+}
+html{
+    font-size: 15px;
+    --fontStyle: 'Proxima', sans-serif;
+    --primaryColor:#ca3c3c;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+body{
+    font: 16px var(--fontStyle);
+}
+
+.flexContainer{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 1rem;
+}
+
+.flex_row{display: flex; flex-flow:row wrap; margin: 0px -1rem;}
+[class^="flex_col-"]{padding: 0px 1rem; flex: 1 0 auto;}
+
+/* Grid Style */
+.flex_col-1{flex-basis: 8.33%; max-width: 8.33%;}
+.flex_col-2{flex-basis: 16.66%; max-width: 16.66%;}
+.flex_col-3{flex-basis: 25%; max-width: 25%;}
+.flex_col-4{flex-basis: 33.33%; max-width: 33.33%;}
+.flex_col-5{flex-basis: 41.66%; max-width: 41.66%;}
+.flex_col-6{flex-basis: 50%; max-width: 50%;}
+.flex_col-7{flex-basis: 58.33%; max-width: 58.33%;}
+.flex_col-8{flex-basis: 66.66%; max-width: 66.66%;}
+.flex_col-9{flex-basis: 75%; max-width: 75%;}
+.flex_col-10{flex-basis: 83.33%; max-width: 83.33%;}
+.flex_col-11{flex-basis: 91.66%; max-width: 91.66%;}
+.flex_col-12{flex-basis: 100%; max-width: 100%;}
+
+.display_flex{display: flex;}
+.align_center{align-items: center;}
+.justify_space_btw{justify-content: space-between;}
+.justify_center{justify-content: center;}
+.gap-y-60{ row-gap: 4rem;}
+.img-resp{ max-width: 100%; height: auto;}
+
+
+
+
+.seemore{ border: none; background: none; color: var(--primaryColor); font-size: 36px;}
+.seemore:hover{color: #000000;}
+
+/* Header */
+header{background: #000000; color: #fff; line-height: 80px; position: sticky; top: 0; z-index: 4;}
+h1{font-size: 30px;}
+h1 a{color: inherit;}
+
+nav ul{ margin-left: -20px;}
+nav li{margin: 0px 5px;}
+nav a{color: inherit; display: block; padding: 0px 15px; line-height: 80px;}
+
+
+nav a:hover{color: var(--primaryColor);}
+
+.btn{font:16px var(--fontStyle); color: var(--primaryColor); background: none; width: 90px; height:35px; border: 2px solid; border-radius: 10px;}
+
+.menu{ display: none; position: absolute; right: 1rem; top: 22.5px; width: 50px;}
+.menu span{ display: block; height: 2px; background: var(--primaryColor); margin: 6px 10px;}
+
+/* =========================== wrap2 and banner =========================== */
+.banner{background:#666; color: #fff; padding: 300px 0px;}
+.banner button{background: none; border: 0px; font-size: 10rem; color: inherit; margin-right: 40px;}
+.banner p{color: inherit; font-size:4rem; font-weight: 200;}
+.banner a{color: var(--primaryColor);}
+
+
+
+/* =========================== wrap3 =========================== */
+
+.wrap3{background: var(--primaryColor); color: #fff; padding: 50px 0px;}
+h2{font-size: 4.8rem; border-bottom: 10px solid; line-height: 0.833; margin-bottom: 2rem; text-transform: uppercase;} 
+.circle{width:100px; border: solid 2px; line-height:96px; border-radius: 50%; text-align: center; font-size: 36px; flex-shrink: 0; margin-right: 2rem;}
+.service_text h3{font-size: 16px; line-height: 30px;}
+.service_text p{font-size: 14px; line-height: 22px; font-weight: 100;}
+
+
+/* =========================== wrap4 =========================== */
+.wrap4{ background: #fff; color: var(--primaryColor); font-size: 36px ; line-height: 10rem; text-align: center;}
+
+
+
+/* =========================== wrap5 =========================== */
+.wrap5{background: #ebebeb; padding: 100px 0 140px; color: #363636;}
+.wrap5 .btn{margin: 0px 10px 4rem 0px;}
+.btn.active, .btn:hover{background: var(--primaryColor); border-color: var(--primaryColor); color: #fff;}
+
+.work{ margin-bottom: 2rem; position: relative; overflow: hidden; }
+.work .work_info{ position: absolute; background: #fff; left: 0; right: 0; bottom: -50px; text-align: center; padding: 20px 0; opacity: 0; visibility: hidden; transition: 400ms;}
+.work .work_info h3{ color: var(--primaryColor); font-size: 18px; text-transform: uppercase; line-height: 40px;}
+.work .work_info p{ font-size: 14px; font-weight: 100; color: #898989; line-height: 20px;}
+.work:hover .work_info{ opacity: 1; visibility: visible; bottom: 0;}
+.work .img-resp{ width: 100%;}
+
+
+/* =========================== wrap6 =========================== */
+
+.wrap6{ padding: 4rem 0 2rem; background: #666; color: #fff;}
+.reviews{ text-align: center; }
+.review{ display: none; }
+.review.active{ display: block }
+.review b{ display: block;}
+.review blockquote q{ font-size: 36px; line-height:1.14; font-weight: 100;}
+.review blockquote img{ margin: 12px 0 10px;}
+.pager{ margin-top: 2rem;}
+.pager li{ margin: 0 5px;}
+.pager a{ display: block; border: 2px solid; color: #fff; width: 10px; height: 10px; border-radius: 50%;}
+.pager a.active{background: #fff;}
+
+
+
+/* =========================== wrap7 =========================== */
+.wrap7{background: #fff; padding: 100px 0 140px; color: #363636;}
+.team{ margin: 50px 0 33px; position: relative;}
+.social{position: absolute; left: 140px; top: 60px;}
+.social li{margin-right: 10px;}
+.social a{width: 50px; line-height: 50px; background: var(--primaryColor); color: #fff; border-radius: 50%; text-align: center; font-size: 24px; display: block;}
+.social a:hover{background: #000000;}
+
+
+.member{ margin: 50px 0 0 100px;}
+.member h3{ color: var(--primaryColor); font-size: 18px; margin-bottom: 10px; } /* not use uppercase property */
+.member small{ color: #898989; font-size: 14px; font-weight: 100;}
+.member p{ font-size: 14px; line-height:1.57; font-weight: 100; margin-top: 20px;}
+
+
+
+/* =========================== wrap8 =========================== */
+.wrap8{background: #666; padding: 85px 0 0 0; color: #fff; text-align: center;}
+.wrap8 span{font-size: 72px;}
+.wrap8 p{font-size: 72px; font-weight: 100;}
+.wrap8 b{font-size: 18px; margin-bottom: 75px; display: inline-block; text-transform: uppercase;}
+
+
+
+/* =========================== wrap9 =========================== */
+.wrap9{background: #fff; padding: 100px 0 140px; color: #363636;}
+canvas{background: #ddd; max-width: 100%; height: auto; margin-top: 50px;}
+
+.accordion{ margin-top: 50px;}
+.accordion li{ margin-bottom: 10px;}
+.accordion a{ display: block; border: 1px solid #ebebeb; padding: 1rem; border-radius: 10px; color: #898989; }
+.accordion a span{ margin-right: 20px;}
+.accordion a::after{ content: '+'; float: right;}
+.accordion p{ font:100 14px/22px var(--fontStyle); margin: 20px; display: none; }
+.accordion a.active{ color: var(--primaryColor);}
+.accordion a.active::after{ content: '-';}
+.accordion li:first-child p{ display: block;}
+
+
+
+/* =========================== wrap10 =========================== */
+.wrap10{ background:var(--primaryColor); padding: 23px 0 22px; }
+.wrap10 input{ width: 370px; background: none; border: none; height: 35px; color: #fff; font: 100 36px var(--fontStyle);}
+.wrap10 input::placeholder{color: #fff; }
+.wrap10 input:focus{ outline: none;}
+.wrap10 button{ background: #fff;}
+.wrap10 button:hover{ background: #000;}
+
+
+
+/* =========================== wrap11 =========================== */
+.wrap11{ background: #7f7f7f; padding: 28px 0 0 0;}
+.box{ margin-bottom: 27px; font-weight: 300; background: #a6a6a6; color: #fff; text-align: center; line-height: 95px; font-size: 28px;}
+
+
+/* =========================== wrap12 =========================== */
+.wrap12{ background: #ebebeb; padding: 100px 0 140px; color: #363636;}
+.wrap12 address{ color: #898989; font: 15px/30px var(--fontStyle); }
+
+.soc{margin: 20px 0; }
+.soc li{ margin-right: 20px; }
+.soc a{ color: var(--primaryColor);}
+.soc a:hover{ color: #000;}
+
+.wrap12 label{ border: 2px solid; color: #363636; padding: 17px; margin: 1rem 0; display: block;}
+.wrap12 input{ border: none; background: none;}
+.wrap12 :is(input, textarea):focus{ outline: none; }
+.wrap12 textarea{border: none; background: none; resize: none; vertical-align: top; height: 42px; }
+.wrap12 button{ margin: 1rem 0; display: block; width: 100%; height: 80px; background: #fff;  border: none; border-radius: 10px; font: 16px var(--fontStyle); color: var(--primaryColor);}
+.wrap12 button span.fa{ font-size: 36px; vertical-align: middle;}
+.wrap12 label:focus-within{ border-color: var(--primaryColor); }
+
+.wrap12 button:hover{background: #000000; color: #fff;}
+
+
+
+/* =========================== wrap13 =========================== */
+.wrap13{ background: #252525; padding: 50px 0 25px; color: #fff; text-align: center;}
+.wrap13 h3{ font-size: 24px;}
+.wrap13 button{ border: none; background: none; color: var(--primaryColor); font-size: 24px;}
+
+.wrap13 button:hover{color: #fff;}
+
+
+/* why javascript call on browser */
+
+/* Responsive */
+@media screen and (max-width:1220px){
+    html{ font-size: 13px;}
+    h2{ font-size: 62px;}
+}
+
+@media screen and (max-width:980px){
+    .banner p{ font-size: 3rem; }
+    .flex_col-t-3{ flex-basis: 25%; max-width: 25%;}
+    .flex_col-t-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .flex_col-t-6{ flex-basis: 50%; max-width: 50%;}
+    .flex_col-t-12{ flex-basis: 100%; max-width: 100%;}
+    .flex_col-t-auto{ flex-basis: 20%; max-width: 20%;}
+    .flex_col-t-hide{ display: none; }
+    .banner p{ font-size: 3rem; }
+    .member{ margin-left: 50px;}
+    .social{ top: 0; left: auto; right: 0; }
+    .social ul{ flex-flow: column; }
+    .social ul li{ margin: 0 0 10px;}
+    .wrap8 p{ font-size: 60px;}
+}
+
+@media screen and (max-width:767px){
+    .flex_col-m-6{ flex-basis: 50%; max-width: 50%; }
+    .flex_col-m-12{ flex-basis: 100%; max-width: 100%; }
+    .flex_col-t-auto{ flex-basis: 33.33%; max-width: 50%;}
+    
+    .flex_collapse{ display: none;}
+    .menu{ display: inline-block;}
+    h2{ font-size: 60px;}
+    .review blockquote q{ font-size: 30px;}
+    .wrap8 p,.wrap8 span.fa{ font-size: 50px;}
+}
+
+
+@media screen and (max-width:460px){
+    .flex_col-p-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .flex_col-p-6{ flex-basis: 50%; max-width: 50%; }
+    .flex_col-p-12{ flex-basis: 100%; max-width: 100%; } 
+    .flex_col-t-auto{ flex-basis: 50%; max-width: 100%;}
+
+    .banner .display_flex{ flex-flow: column;}
+
+    .review blockquote q{ font-size: 24px;}
+    .wrap10 input{ width: 240px; font-size: 24px;}
+}
